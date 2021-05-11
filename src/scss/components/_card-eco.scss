@@ -1,0 +1,75 @@
+.card-eco {
+  min-width: 280px;
+  max-height: 54px;
+  padding: 10px 40px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgb(254, 239, 239);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    max-width: 170px;
+    max-height: 40px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #37383c;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    & span {
+      font-size: 12px;
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 540px) {
+  .card-eco {
+    min-width: 480px;
+    max-height: 104px;
+    font-size: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      max-width: 200px;
+      max-height: 30px;
+      font-size: 20px;
+    }
+
+    &__icon {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-eco {
+    min-width: 420px;
+    margin: 5px;
+  }
+}
+
+@media (min-width: 1440px) {
+}
