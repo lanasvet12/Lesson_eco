@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { Button, MenuPopup } from '../components';
 
 import logo from '../images/logo.svg';
 
@@ -14,7 +13,7 @@ function Navigation(props) {
               <img class="logo__img" src={logo} alt="image logo" />
             </Link>
 
-            <Button className="menu__popup" />
+            <button className="menu__popup"></button>
 
             {/* <MenuPopup /> */}
           </div>
