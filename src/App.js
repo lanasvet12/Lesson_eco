@@ -3,6 +3,7 @@ import React from 'react';
 // import logo from '../images/content/logo.png';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Navigation, Footer, Home } from './components';
+import { Login } from './pages';
 import './scss/app.scss';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Navigation />
           <Switch>
             <Route path="/" exact component={() => <Home />} />
+            <Route exact path="/login" component={Login} />
           </Switch>
           <Footer />
         </Router>

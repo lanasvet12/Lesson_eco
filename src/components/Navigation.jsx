@@ -18,7 +18,7 @@ function Navigation(props) {
             {/* <MenuPopup /> */}
           </div>
 
-          <Link class="header__link" to="#">
+          <Link class="header__link" to="/login">
             Увійти
           </Link>
         </div>
