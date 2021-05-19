@@ -1,5 +1,8 @@
 .login {
-  padding: 60px 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
@@ -16,7 +19,7 @@
 
 .form input {
   width: 100%;
-  max-width: 250px;
+  min-width: 250px;
   border: 2px solid #f6f6f6;
   outline: white;
 
@@ -41,7 +44,7 @@
   max-width: 200px;
   margin: 12px 0 35px;
   font-size: 18px;
-  line-height: 3.5;
+  line-height: 2.5;
   text-align: center;
   background-color: rgb(155, 239, 254);
   color: rgb(123, 122, 122);
@@ -52,4 +55,5 @@
 .btn:hover {
   color: #fff;
   background-color: rgb(96, 231, 255);
+  border-radius: 5px;
 }

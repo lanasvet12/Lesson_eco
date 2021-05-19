@@ -51,10 +51,10 @@ button {
 .title {
   position: relative;
   padding-bottom: 10px;
-  font-size: 14px;
+  font-size: 36px;
   color: $accent;
   text-align: left;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   @extend %roboto-700;
 }
 
@@ -66,4 +66,8 @@ button {
     width: 60px;
     height: 25px;
   }
+}
+
+.App {
+  height: 100%;
 }

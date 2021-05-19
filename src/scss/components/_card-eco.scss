@@ -1,13 +1,14 @@
 .card-eco {
   min-width: 280px;
   max-height: 54px;
-  padding: 10px 40px 10px 20px;
+  margin-bottom: 24px;
+  padding: 45px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  // background: #86e3ce;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
 
@@ -22,9 +23,10 @@
   &__title {
     max-width: 170px;
     max-height: 40px;
-    margin: 0 auto;
-    font-size: 16px;
-    color: #37383c;
+    // margin: 0 auto;
+    font-size: 18px;
+    font-weight: 600;
+    color: #004d38;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -67,7 +69,7 @@
 @media (min-width: 1024px) {
   .card-eco {
     min-width: 420px;
-    margin: 5px;
+    // margin: 5px;
   }
 }
 

@@ -3,24 +3,18 @@ import { Link, withRouter } from 'react-router-dom';
 
 import logo from '../images/logo.svg';
 
-function Navigation(props) {
+function Navigation() {
   return (
     <header id="header-section" class="header">
       <div class="container">
         <div class="header__inner">
           <div class="header__box">
-            <Link class="logo" to="/">
+            <Link class="logo" to="/Home">
               <img class="logo__img" src={logo} alt="image logo" />
             </Link>
 
             <button className="menu__popup"></button>
-
-            {/* <MenuPopup /> */}
           </div>
-
-          <Link class="header__link" to="/login">
-            Увійти
-          </Link>
         </div>
       </div>
     </header>

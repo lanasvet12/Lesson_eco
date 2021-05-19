@@ -80,7 +80,7 @@ const Login = ({ initialState }) => {
             placeholder="Пароль..."
           />
           <button disabled={!formValid} className={style.btn} type="submit">
-            Зареєструватися
+            Увійти
           </button>
         </form>
       </div>
