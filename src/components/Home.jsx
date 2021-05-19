@@ -30,7 +30,6 @@ function Home() {
                 </li>
               </ul>
             </div>
-
             <div class="content__items">
               <article class="card-eco">
                 <svg class="card-eco__icon">
