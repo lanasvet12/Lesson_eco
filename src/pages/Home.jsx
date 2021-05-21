@@ -1,6 +1,5 @@
 import React from 'react';
 import { QuizBlock } from '../components';
-import quiz1 from '../images/icons/quiz-1.svg';
 
 function Home({ items }) {
   return (
@@ -28,7 +27,13 @@ function Home({ items }) {
 
               <div class="content__items">
                 {items.map((obj) => (
-                  <QuizBlock key={obj.id} name={obj.name} bg={obj.bg} />
+                  <QuizBlock
+                    id={obj.id}
+                    quiz_title={obj.quiz_title}
+                    quiz_class={obj.quiz_class}
+                    img={obj.img}
+                    color={obj.color}
+                  />
                 ))}
               </div>
             </div>

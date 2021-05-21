@@ -19,16 +19,28 @@
   .container {
     padding: 0 30px;
   }
+  .quiz button{
+    margin: 0 auto;
+  
+  }
 }
 @media (min-width: 768px) {
   .container {
     padding: 0 40px;
   }
+  .quiz button{
+    margin: 0 auto;  
+  }
+
 }
 @media (min-width: 1024px) {
   .container {
     max-width: 1200px;
     margin: 0 auto;
+  }
+  .quiz button{
+    margin: 0 auto;
+  
   }
 }
 @media (min-width: 1440px) {
@@ -53,11 +65,46 @@ button {
   padding-bottom: 10px;
   font-size: 36px;
   color: $accent;
+  margin: 0 auto;
   text-align: left;
   // text-transform: uppercase;
   @extend %roboto-700;
 }
+.title_quiz{
+position: relative;
+  padding-bottom: 10px;
+  font-size: 36px;
+  color: #178a26;
+  margin: 0 auto;
+  // text-transform: uppercase;
+  @extend %roboto-700;
+}
+.content__text_quiz{
+    margin-bottom: 24px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #178a26;
+}
+.card-eco__title_quiz{
+  font-size: 20px;
+  color: #37383c;
+}
+.card-eco__title_quiz{
+  margin: 0 auto;
+}
+.quiz button{
+  background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 auto;
 
+}
 .logo {
   display: none;
   margin-right: 20px;

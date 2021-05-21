@@ -1,17 +1,23 @@
 import React from 'react';
-import quiz1 from '../images/icons/quiz-1.svg';
+import { Link } from 'react-router-dom';
+// import { Quiz } from '../pages';
 
-const QuizBlock = ({ name, bg }) => {
+const QuizBlock = ({ quiz_title, quiz_class, img, color, id }) => {
   const TodoComponent = {
-    backgroundColor: bg,
+    backgroundColor: color,
   };
-  console.log(TodoComponent);
+
   return (
     <div>
-      <article class="card-eco" style={TodoComponent}>
-        <h2 className="card-eco__title">{name}</h2>
-        <img className="card-eco__img" src={quiz1} alt="images quiz" />
-      </article>
+      <Link to={{ pathname: '/quiz', id: id }}>
+        <article class="card-eco" style={TodoComponent}>
+          <div className="card-eco__box">
+            <h2 className="card-eco__title">{quiz_title}</h2>
+            <span>клас {quiz_class}</span>
+          </div>
+          <img className="card-eco__img" src={img} alt="images quiz" />
+        </article>
+      </Link>
     </div>
   );
 };

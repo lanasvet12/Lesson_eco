@@ -2,28 +2,42 @@
   "quiz": [
     {
       "id": 0,
-      "imageUrl": "",
-      "name": "Клас 1-4",
-      "bg": "#86E3CE"
+      "img": "./img/quiz-1.svg",
+      "quiz_title": "Сортування сміття",
+      "quiz_class": "1-4",
+      "color": "#86E3CE",
+      "questions": [
+        {  
+        "question_title":"Як називається тканина, у виробництві яко використовується переробленний пластик?",
+        "answers" : ["шовк", "бабовна", "поліестер","інакше"]
+      },
+      { 
+        "id_question": 2, 
+        "question_title":"виробництві яко використовується переробленний пластик?",
+        "answers" : ["бабовна", "інакше"]
+      }
+    ]
     },
     {
       "id": 1,
-     "imageUrl": "",
-      "name": "Клас 5-7",
-      "bg": "#FFDD95"
+      "img": "./img/quiz-2.svg",
+      "quiz_title": "Переробка сміття",
+      "quiz_class": "5-7",
+      "color": "#FFDD95"
     },
     {
       "id": 2,
-     "imageUrl": "",
-      "name": "Клас 8-10",
-     "bg": "#D0E6A5"
+      "img": "./img/quiz-3.svg",
+      "quiz_title": "Екологія світу",
+      "quiz_class": "8-10",
+     "color": "#D0E6A5"
     },
     {
       "id": 3,
-     "imageUrl": "",
-      "name": "Клас 11-12",
-      "bg": "#FC887B"
+      "img": "./img/quiz-4.svg",
+      "quiz_title": "Вплив екології на людину.",
+      "quiz_class": "11-12",
+      "color": "#FC887B"
     }
-    
   ]
 }
