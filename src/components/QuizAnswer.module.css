@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+  padding-top: 15px;
 }
 
 .title {
@@ -28,76 +29,4 @@
 .breadcrumbs__last {
   font-size: 18px;
   color: #8bc63e84;
-}
-
-.quest {
-  max-width: 280px;
-  min-height: 240px;
-  margin-bottom: 45px;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-}
-
-.image {
-  width: 240px;
-  height: 135px;
-  margin-bottom: 15px;
-  object-fit: contain;
-}
-
-.text {
-  height: 55px;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: center;
-  color: #3d3d3d;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.items {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.item {
-  width: 100%;
-  min-height: 50px;
-  min-width: 280px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.item:hover {
-  background-color: #019144;
-}
-
-.item:hover .desc {
-  color: #fff;
-}
-
-.desc {
-  padding: 15px;
-  font-size: 18px;
-  color: #019144;
 }

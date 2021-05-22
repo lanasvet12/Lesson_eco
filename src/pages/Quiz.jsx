@@ -4,7 +4,8 @@ import { QuizAnswer } from '../components';
 import Background from '../images/content/quiz-bg.svg';
 import style from './Quiz.module.css';
 
-function Quiz() {
+function Quiz({ items }) {
+  console.log(items);
   return (
     <div
       className={style.quiz}
@@ -14,7 +15,6 @@ function Quiz() {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
       }}>
-      >
       <div className="container">
         <div className={style.wrapper}>
           <QuizAnswer />

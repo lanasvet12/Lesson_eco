@@ -5,12 +5,12 @@ import logo from '../images/logo.svg';
 
 function Navigation() {
   return (
-    <header id="header-section" class="header">
-      <div class="container">
-        <div class="header__inner">
-          <div class="header__box">
-            <Link class="logo" to="/Home">
-              <img class="logo__img" src={logo} alt="image logo" />
+    <header id="header-section" className="header">
+      <div className="container">
+        <div className="header__inner">
+          <div className="header__box">
+            <Link className="logo" to="/Home">
+              <img className="logo__img" src={logo} alt="logo" />
             </Link>
 
             <button className="menu__popup"></button>
