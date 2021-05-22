@@ -1,17 +1,26 @@
 import React from 'react';
 import { QuizAnswer } from '../components';
 
-function Quiz(props) {
-  console.log(props.location);
+import Background from '../images/content/quiz-bg.svg';
+import style from './Quiz.module.css';
 
+function Quiz() {
   return (
-    <main class="main">
-      <section class="content quiz">
-        <div class="container">
+    <div
+      className={style.quiz}
+      style={{
+        background: `url(${Background})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+      }}>
+      >
+      <div className="container">
+        <div className={style.wrapper}>
           <QuizAnswer />
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 }
 

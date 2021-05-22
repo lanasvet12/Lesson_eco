@@ -2,6 +2,15 @@ import React from 'react';
 import { QuizBlock } from '../components';
 
 function Home({ items }) {
+  const [quiz, setQuiz] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch('http://localhost:3000/db.json')
+      .then((resp) => resp.json())
+      .then((json) => {
+        setQuiz(json.quiz);
+      });
+  }, []);
   return (
     <main class="main">
       <section class="content">
@@ -11,23 +20,10 @@ function Home({ items }) {
             <p class="content__text">Доступні тести</p>
 
             <div class="content__box">
-              {/* <div class="content__menu">
-                <ul class="content__list">
-                  <li class="content__item">
-                    <a class="content__icon" href="#"></a>
-                  </li>
-
-                  <li class="content__item">
-                    <a class="content__icon" href="#">
-                      <svg class="content__svg"></svg>
-                    </a>
-                  </li>
-                </ul>
-              </div> */}
-
               <div class="content__items">
-                {items.map((obj) => (
+                {quiz.map((obj) => (
                   <QuizBlock
+                    key={obj.id}
                     id={obj.id}
                     quiz_title={obj.quiz_title}
                     quiz_class={obj.quiz_class}
