@@ -4,7 +4,31 @@ import { Quest } from '../components';
 import style from './QuizAnswer.module.css';
 import image from '../images/content/quest1.jpg';
 
-const QuizAnswer = ({ items }) => {
+const QuizAnswer = ({ quiz, questions }) => {
+  //индекс выбраного квеста
+  let indexQuiz = 0;
+
+  //по id получаем елемент квеста ид должны получитьь с компоненты тестов
+  let quizTitle = quiz.map((mapItem) => {
+    if (mapItem.id == indexQuiz) {
+      return mapItem.quiz_title;
+    }
+  });
+
+  //компонента вопросов
+  let newArr = questions.map((el, index) => {
+    if (el.id_quiz == indexQuiz) {
+      return (
+        <Quest
+          key={`${el.id}_${index}`}
+          img_quest={el.img_quest}
+          question_title={el.question_title}
+          answers={el.answers}
+        />
+      );
+    }
+  });
+
   return (
     <div className={style.wrapper}>
       <div className={style.inner}>
@@ -22,7 +46,7 @@ const QuizAnswer = ({ items }) => {
           />
         </svg>
 
-        <span className={style.title}>jkghjfghdgdfd</span>
+        <span className={style.title}>{quizTitle}</span>
         <Link to="/Home">
           <svg
             width="16"
@@ -38,9 +62,7 @@ const QuizAnswer = ({ items }) => {
         <span className={style.breadcrumbs__first}>1</span>/
         <span className={style.breadcrumbs__last}>20</span>
       </div>
-      <div>
-        <Quest />
-      </div>
+      <div>{newArr}</div>
     </div>
   );
 };

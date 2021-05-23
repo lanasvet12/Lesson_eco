@@ -1,7 +1,7 @@
 import React from 'react';
 import { QuizBlock } from '../components';
 
-function Home({ items }) {
+function Home({ quiz }) {
   return (
     <div className="container">
       <div className="content__inner">
@@ -10,8 +10,8 @@ function Home({ items }) {
 
         <div className="content__box">
           <div className="content__items">
-            {items &&
-              items.map((obj, index) => (
+            {quiz &&
+              quiz.map((obj, index) => (
                 <QuizBlock
                   key={`${obj.id}_${index}`}
                   id={obj.id}
