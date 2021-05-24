@@ -36,7 +36,7 @@ let state = {
     {
       id: 0,
       id_quiz: '0',
-      img_quest: './img/ques_img_1.png',
+      img_quest: '../img/ques_img_1.png',
       question_title:
         'Як називається тканина, у виробництві яко використовується переробленний пластик?',
       answers: [
@@ -49,21 +49,21 @@ let state = {
     {
       id: 1,
       id_quiz: '0',
-      img_quest: './img/ques_img_1.png',
+      img_quest: '../img/ques_img_1.png',
       question_title: 'виробництві яко використовується переробленний пластик?',
       answers: [{ answer: 'поліестер' }, { answer: 'бабовна' }, { answer: 'інакше' }],
     },
     {
       id: 2,
       id_quiz: '1',
-      img_quest: './img/ques_img_1.png',
+      img_quest: '../img/ques_img_1.png',
       question_title: 'використовується переробленний пластик?',
       answers: [{ answer: 'поліестер' }, { answer: 'інакше' }],
     },
     {
       id: 0,
       id_quiz: '0',
-      img_quest: './img/ques_img_1.png',
+      img_quest: '../img/ques_img_1.png',
       question_title:
         'Як називається тканина, у виробництві яко використовується переробленний пластик?',
       answers: [
@@ -76,7 +76,7 @@ let state = {
     {
       id: 1,
       id_quiz: '0',
-      img_quest: './img/ques_img_1.png',
+      img_quest: '../img/ques_img_1.png',
       question_title: 'виробництві яко використовується переробленний пластик?',
       answers: [
         { answer: 'шовк' },
@@ -88,7 +88,7 @@ let state = {
     {
       id: 2,
       id_quiz: '1',
-      img_quest: './img/ques_img_1.png',
+      img_quest: '../img/ques_img_1.png',
       question_title: 'використовується переробленний пластик?',
       answers: [
         { answer: 'шовк' },
@@ -96,6 +96,13 @@ let state = {
         { answer: 'поліестер' },
         { answer: 'інакше' },
       ],
+    },
+  ],
+
+  countQuiz: [
+    {
+      id: 0,
+      count: 0,
     },
   ],
 };

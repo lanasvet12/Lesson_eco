@@ -4,9 +4,9 @@ import { Quest } from '../components';
 import style from './QuizAnswer.module.css';
 import image from '../images/content/quest1.jpg';
 
-const QuizAnswer = ({ quiz, questions }) => {
+const QuizAnswer = ({ quiz, questions, id }) => {
   //индекс выбраного квеста
-  let indexQuiz = 0;
+  let indexQuiz = id;
 
   //по id получаем елемент квеста ид должны получитьь с компоненты тестов
   let quizTitle = quiz.map((mapItem) => {

@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch, render } from 'react-router-dom';
 
-import { Navigation } from './components';
+import { Header } from './components';
 import { Login, Home, Quiz } from './pages';
 import './scss/app.scss';
 
 function App(props) {
-  // console.log(props);
+  console.log(props);
   // const [quiz, setQuiz] = React.useState([]);
 
   // React.useEffect(() => {
@@ -20,7 +20,7 @@ function App(props) {
   return (
     <div className="wrapper">
       <Router>
-        <Navigation />
+        <Header />
         <div className="content">
           <Switch>
             <Route path="/" exact component={() => <Login />} />
@@ -28,7 +28,7 @@ function App(props) {
             <Route exact path="/home" render={() => <Home quiz={props.appState.quiz} />} />
             <Route
               exact
-              path="/quiz"
+              path="/quiz/:id"
               render={() => (
                 <Quiz quiz={props.appState.quiz} questions={props.appState.questions} />
               )}

@@ -4,8 +4,13 @@ import { QuizAnswer } from '../components';
 import Background from '../images/content/quiz-bg.svg';
 import style from './Quiz.module.css';
 
+import { BrowserRouter as Router, Route, Switch, useParams } from 'react-router-dom';
+
 function Quiz({ quiz, questions }) {
-  // console.log(quiz);
+  // const prodId = props.match.params.id;
+  const { id } = useParams();
+
+
   return (
     <div
       className={style.quiz}
@@ -17,7 +22,7 @@ function Quiz({ quiz, questions }) {
       }}>
       <div className="container">
         <div className={style.wrapper}>
-          <QuizAnswer quiz={quiz} questions={questions} />
+          <QuizAnswer id={id} quiz={quiz} questions={questions} />
         </div>
       </div>
     </div>
