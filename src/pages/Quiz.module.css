@@ -1,0 +1,10 @@
+.quiz {
+  z-index: 0;
+  padding-bottom: 105px;
+}
+
+@media (min-width: 640px) {
+  .quiz {
+    background-image: none !important;
+  }
+}

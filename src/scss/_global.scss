@@ -19,22 +19,34 @@
   .container {
     padding: 0 30px;
   }
+  // .body {
+  //   background: url(../images/bg_quez_1.jpg);
+  // }
 }
 @media (min-width: 768px) {
   .container {
     padding: 0 40px;
   }
+  // .body {
+  //   background: url(../images/bg_quez_1.jpg);
+  // }
 }
 @media (min-width: 1024px) {
   .container {
     max-width: 1200px;
     margin: 0 auto;
   }
+  // .body {
+  //   background: url(../images/bg_quez_1.jpg);
+  // }
 }
 @media (min-width: 1440px) {
   .container {
     max-width: 1320px;
   }
+  // .body {
+  //   background: url(../images/bg_quez_1.jpg);
+  // }
 }
 
 .main {
@@ -71,3 +83,156 @@ button {
 .App {
   height: 100%;
 }
+.title_quiz {
+  position: relative;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-family: Inter;
+  line-height: 22px;
+  color: #353535;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.content__text_quiz {
+  margin-bottom: 24px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: -0.017em;
+  color: #8bc53f;
+}
+.content__text_quiz span {
+  font-size: 20px;
+  color: #aae55c;
+}
+
+.card-eco__title_quiz {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  color: #3d3d3d;
+}
+.card-eco_quiz {
+  min-width: 280px;
+  margin-bottom: 24px;
+  padding: 30px 20px;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+.img_quize {
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+.card-eco__title_quiz {
+  margin: 0 auto;
+  max-width: 280px;
+}
+.title_quiz {
+  position: relative;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-family: Inter;
+  line-height: 22px;
+  color: #353535;
+  font-weight: bold;
+  margin: 0 auto;
+}
+.titlemob_quiz {
+  text-align: center;
+}
+.card-eco__title_qest {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  margin: 0 auto;
+  color: #5bcbb2;
+}
+.card-eco__title_button {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+.wrapper {
+  // background-size: cover;
+  // background-position: center center;
+  // background-attachment: fixed;
+  // background: url(../images/bg_quez_1.jpg);
+}
+
+@media (min-width: 1200px) {
+  // #root {
+  //   background: url(../images/bg_quez_1.jpg);
+  // }
+}
+
+// .quiz button {
+//   background-color: #4caf50;
+//   border: none;
+//   color: white;
+//   padding: 15px 32px;
+//   text-align: center;
+//   text-decoration: none;
+//   display: inline-block;
+//   font-size: 16px;
+//   margin: 0 auto;
+// }
+.card-eco_quest {
+  min-width: 320px;
+  max-height: 54px;
+  margin-bottom: 24px;
+  padding: 45px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.card-eco_quest:hover {
+  background-color: #fc887b;
+}
+.card-eco_button:hover {
+  background-color: #1a7460;
+}
+.card-eco_button {
+  min-width: 320px;
+  max-height: 54px;
+  margin-bottom: 24px;
+  padding: 45px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #86e3ce;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.img_quize {
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+// .wrapper {
+// background-size: cover;
+// background-position: center center;
+// background-attachment: fixed;
+// }

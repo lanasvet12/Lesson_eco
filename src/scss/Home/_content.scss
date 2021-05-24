@@ -1,6 +1,7 @@
 .content {
-  padding: 27px 0;
-
+  &__inner {
+    padding: 15px 0;
+  }
   &__menu {
     display: none;
   }
