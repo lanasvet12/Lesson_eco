@@ -8,7 +8,6 @@ const QuizBlock = ({ quiz_title, quiz_class, img, color, id }) => {
     backgroundColor: color,
   };
 
-  let activeIndex = 0;
   return (
     <Link to={`/quiz/${id}`}>
       <article className="card-eco" style={TodoComponent}>

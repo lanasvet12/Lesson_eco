@@ -14,7 +14,6 @@ const QuizAnswer = ({ quiz, questions, id }) => {
       return mapItem.quiz_title;
     }
   });
-
   //компонента вопросов
   let newArr = questions.map((el, index) => {
     if (el.id_quiz == indexQuiz) {
@@ -28,7 +27,6 @@ const QuizAnswer = ({ quiz, questions, id }) => {
       );
     }
   });
-
   return (
     <div className={style.wrapper}>
       <div className={style.inner}>

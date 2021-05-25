@@ -4,13 +4,17 @@ import { QuizAnswer } from '../components';
 import Background from '../images/content/quiz-bg.svg';
 import style from './Quiz.module.css';
 
-import { BrowserRouter as Router, Route, Switch, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
-function Quiz({ quiz, questions }) {
-  // const prodId = props.match.params.id;
+function Quiz({ quiz }) {
   const { id } = useParams();
+  let quests = [];
 
-
+  quiz.map((obj) => {
+    obj.questions.map((quest) => {
+      quests.push(quest);
+    });
+  });
   return (
     <div
       className={style.quiz}
@@ -22,11 +26,10 @@ function Quiz({ quiz, questions }) {
       }}>
       <div className="container">
         <div className={style.wrapper}>
-          <QuizAnswer id={id} quiz={quiz} questions={questions} />
+          <QuizAnswer quiz={quiz} questions={quests} id={id} />
         </div>
       </div>
     </div>
   );
 }
-
 export default Quiz;

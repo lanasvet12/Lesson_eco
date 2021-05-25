@@ -2,7 +2,6 @@ import React from 'react';
 import { QuizBlock } from '../components';
 
 function Home({ quiz }) {
-  // console.log(passChildData);
   return (
     <div className="container">
       <div className="content__inner">

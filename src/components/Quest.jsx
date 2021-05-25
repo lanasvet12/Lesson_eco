@@ -5,7 +5,6 @@ import style from './Quest.module.css';
 import image from '../images/content/quest1.jpg';
 
 const Quest = ({ img_quest, question_title, answers }) => {
-  // console.log(question_title);
   return (
     <div className={style.box}>
       <div className={style.quest}>
@@ -14,7 +13,7 @@ const Quest = ({ img_quest, question_title, answers }) => {
         <p className={style.text}>{question_title}</p>
       </div>
       <div className={style.items}>
-        {answers && answers.map((obj, index) => <ButtonQuestAnsw answer={obj.answer} />)}
+        {answers && answers.map((obj) => <ButtonQuestAnsw answer={obj.answer} />)}
       </div>
     </div>
   );
