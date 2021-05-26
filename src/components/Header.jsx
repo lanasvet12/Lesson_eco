@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 import logo from '../images/logo.png';
 
-function Navigation() {
+function Header() {
   return (
     <header id="header-section" className="header">
       <div className="container">
@@ -21,4 +21,4 @@ function Navigation() {
   );
 }
 
-export default withRouter(Navigation);
+export default withRouter(Header);

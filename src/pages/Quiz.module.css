@@ -2,6 +2,7 @@
   padding-bottom: 105px;
   overflow-x: hidden;
   z-index: 0;
+  height: 100vh;
 }
 
 .quiz::-webkit-scrollbar {

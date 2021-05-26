@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Quest } from '../components';
 import style from './QuizAnswer.module.css';
-import image from '../images/content/quest1.jpg';
 
 const QuizAnswer = ({ quiz, questions, id }) => {
   //индекс выбраного квеста
@@ -10,13 +9,13 @@ const QuizAnswer = ({ quiz, questions, id }) => {
 
   //по id получаем елемент квеста ид должны получитьь с компоненты тестов
   let quizTitle = quiz.map((mapItem) => {
-    if (mapItem.id == indexQuiz) {
+    if (mapItem.id === indexQuiz) {
       return mapItem.quiz_title;
     }
   });
   //компонента вопросов
   let newArr = questions.map((el, index) => {
-    if (el.id_quiz == indexQuiz) {
+    if (el.id_quiz === indexQuiz) {
       return (
         <Quest
           key={`${el.id}_${index}`}
