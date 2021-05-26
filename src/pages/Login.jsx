@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import style from './Login.module.css';
+import { Link, withRouter } from 'react-router-dom';
+import logo from '../images/logo.png';
+
 
 const Login = ({ initialState }) => {
   const [phone, setPhone] = useState(initialState);
@@ -56,10 +59,10 @@ const Login = ({ initialState }) => {
   };
 
   return (
-    <div className={style.login}>
-      <div className="container">
+     <div className={style.login}>
+      <div className="container">        
         <form className={style.form}>
-          <h1 className={style.title}>Реєстрація</h1>
+          <h1 className={style.title}>Авторизація</h1>
           {phoneDirty && phoneError && <div style={{ color: 'red' }}>{phoneError}</div>}
           <input
             className={style.phone}

@@ -1,12 +1,11 @@
-const {Router} = require('express')
 const User = require('../../models/User')
 const bcrypt = require('bcryptjs')
 const config = require('config')
-// const auth = require('../middleware/auth.middleware')
+// const auth = require('../../middleware/auth.middleware')
 const jwt = require('jsonwebtoken')
-const router = Router()
 
-router.post('/register', async (req,res) => {
+class AuthController{
+    async register(req,res){
         try {
             const candidate = await User.findOne({ phone: req.body.phone })
 
@@ -25,12 +24,12 @@ router.post('/register', async (req,res) => {
             return res.status(200).json({message: 'Пользователь создан!'})
 
         }
-         catch (e) {
-            res.status(400).json({message: e.message})
+        catch (e) {
+            return res.status(400).json({message: e.message})
         }
-    })
+    }
 
-router.post('/login', async (req,res) => {
+    async login(req,res){
         try {
             const {phone, password} = req.body
 
@@ -39,7 +38,7 @@ router.post('/login', async (req,res) => {
             if(!user){
                 return res.status(400).json({message:'Пользователь не найден'})
             }
-            
+
             const isMatch = await bcrypt.compare(password, user.password)
 
             if(!isMatch){
@@ -56,6 +55,7 @@ router.post('/login', async (req,res) => {
         catch (e) {
             return res.status(400).json({message:'Что-то пошло не так, попробуйте снова'})
         }
-    })
+    }
+}
 
-module.exports = router
+module.exports = new AuthController()

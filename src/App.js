@@ -1,33 +1,26 @@
 import React from 'react';
-// import Link from 'react-router-dom';
-// import logo from '../images/content/logo.png';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Navigation } from './components';
-import { Login, Home, Quiz } from './pages';
+
+import { Header } from './components';
+import { Login, Home, Quiz, QuizResultPage } from './pages';
 import './scss/app.scss';
 
-function App() {
-  const [quiz, setQuiz] = React.useState([]);
-
-  React.useEffect(() => {
-    fetch('http://localhost:3000/db.json')
-      .then((resp) => resp.json())
-      .then((json) => {
-        setQuiz(json.quiz);
-      });
-  }, []);
+function App(props) {
   return (
-    <div className="App">
-      <div class="wrapper">
-        <Router>
-          <Navigation />
-          <Switch>
-            <Route path="/" exact component={() => <Login />} />
-            <Route exact path="/home" render={() => <Home items={quiz} />} />
-            <Route exact path="/quiz" exact component={() => <Quiz />} />
-          </Switch>
-        </Router>
-      </div>
+    <div className="wrapper">
+    
+      <Router>
+      <Header />
+        <Switch>
+        <Route path="/" exact component={() => <Login />} />
+        </Switch>
+        
+        <div className="content">        
+          <Route exact path="/home" render={() => <Home quiz={props.appState.quiz} />} />
+          <Route exact path="/quiz/:id" render={() => <Quiz quiz={props.appState.quiz} />} />
+          <Route exact path="/quiz-result" component={() => <QuizResultPage />} />
+        </div>
+      </Router>
     </div>
   );
 }
