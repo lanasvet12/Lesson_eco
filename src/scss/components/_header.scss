@@ -1,4 +1,5 @@
 .header {
+<<<<<<< HEAD
   min-height: 56px;
   padding: 2px 0;
   box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
@@ -7,10 +8,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+=======
+  min-height: 66px;
+  padding: 2px 0;
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+
+  &__inner {
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+>>>>>>> d0beb3df34ae4bf863c8aa0f4e8cad9ca40b1a58
   }
 
   &__box {
     display: flex;
+<<<<<<< HEAD
+=======
+    justify-content: space-between;
+>>>>>>> d0beb3df34ae4bf863c8aa0f4e8cad9ca40b1a58
     align-items: center;
     padding: 6px 0;
   }
@@ -35,14 +51,20 @@
       position: relative;
       width: 40px;
       height: 40px;
+<<<<<<< HEAD
       margin-right: -40px;
       border-radius: 3px;
       background-color: #fff;
+=======
+      border-radius: 3px;
+      background-color: transparent;
+>>>>>>> d0beb3df34ae4bf863c8aa0f4e8cad9ca40b1a58
       border: none;
 
       &::after {
         position: absolute;
         content: '';
+<<<<<<< HEAD
         top: 15px;
         left: 0px;
         width: 18px;
@@ -50,6 +72,15 @@
         background-color: $accent;
         border-radius: 1px;
         box-shadow: 0 5px 0 0 $accent, 0 10px 0 0 $accent;
+=======
+        top: 13px;
+        left: 5px;
+        width: 30px;
+        height: 2px;
+        background-color: #37383c;
+        border-radius: 1px;
+        box-shadow: 0 6px 0 0 #37383c, 0 12px 0 0 #37383c;
+>>>>>>> d0beb3df34ae4bf863c8aa0f4e8cad9ca40b1a58
       }
     }
 
@@ -105,12 +136,15 @@
 
 @media (min-width: 1024px) {
   .header {
+<<<<<<< HEAD
     &__inner {
       padding-top: 7px;
     }
     .logo {
       display: inline-block;
     }
+=======
+>>>>>>> d0beb3df34ae4bf863c8aa0f4e8cad9ca40b1a58
     .menu {
       &__popup {
         display: none;
