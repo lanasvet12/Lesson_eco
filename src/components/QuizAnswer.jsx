@@ -22,9 +22,19 @@ const QuizAnswer = ({ quiz, questions, id }) => {
     if (el.id_quiz === indexQuiz) return el;
   });
 
+  //num step in quest
+  let numberStep = questionsArr.length;
+  function stepCountThisQuest(currentStep) {
+    let newCount = 0;
+    if (currentStep < numberStep) {
+      return (newCount = currentStep + 1);
+    } else {
+      return (newCount = 0);
+    }
+  }
+
   //компонента вопросов
   let newArr = questionsArr.map((el, index) => {
-    console.log(style);
     return (
       <div className={classNames(style.card, index == currentStep ? style.active : '')}>
         <Quest
@@ -67,8 +77,8 @@ const QuizAnswer = ({ quiz, questions, id }) => {
         </Link>
       </div>
       <div className={style.breadcrumbs}>
-        <span className={style.breadcrumbs__first}>1</span>/
-        <span className={style.breadcrumbs__last}>20</span>
+        <span className={style.breadcrumbs__first}>{stepCountThisQuest(currentStep)}</span>/
+        <span className={style.breadcrumbs__last}>{numberStep}</span>
       </div>
       <div className={style.items}>{newArr}</div>
     </div>

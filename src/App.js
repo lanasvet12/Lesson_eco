@@ -8,11 +8,11 @@ import './scss/app.scss';
 function App(props) {
   return (
     <div className="wrapper">
+      <Header />
       <Router>
         <Switch>
           <Route path="/" exact component={() => <Login />} />
         </Switch>
-        <Header />
         <div className="content">
           <Route exact path="/home" render={() => <Home quiz={props.appState.quiz} />} />
           <Route exact path="/quiz/:id" render={() => <Quiz quiz={props.appState.quiz} />} />
