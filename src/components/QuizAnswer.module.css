@@ -19,6 +19,7 @@
 
 .breadcrumbs {
   width: 100%;
+  margin-top: 15px;
   margin-bottom: 27px;
   display: flex;
   justify-content: center;
@@ -35,4 +36,21 @@
 .breadcrumbs__last {
   font-size: 18px;
   color: #8bc63e84;
+}
+
+.items {
+  position: relative;
+}
+
+.card.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  opacity: 0;
 }

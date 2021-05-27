@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { QuizBlock } from '../components';
-=======
-import { QuizBlock} from '../components';
->>>>>>> d0beb3df34ae4bf863c8aa0f4e8cad9ca40b1a58
+
 
 function Home({ quiz }) {
   return (
