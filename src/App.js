@@ -11,13 +11,13 @@ function App(props) {
       <Router>
         <Switch>
           <Route path="/" exact component={() => <Login />} />
+          <Route exact path="/quiz/:id" render={() => <Quiz quiz={props.appState.quiz} />} />
 
           <div className="content">
-            <Route exact path="/quiz/:id" render={() => <Quiz quiz={props.appState.quiz} />} />
-            <Route exact path="/statistics" component={() => <StatisticsPage />} />
             <Fragment>
               <Header />
               <Route exact path="/home" render={() => <Home quiz={props.appState.quiz} />} />
+              <Route exact path="/statistics" component={() => <StatisticsPage />} />
             </Fragment>
           </div>
         </Switch>

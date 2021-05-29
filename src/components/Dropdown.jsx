@@ -49,7 +49,7 @@ function Dropdown({ title, items, multiSelect = false }) {
               <li className="dd-list-item" key={item.id}>
                 <div type="link" className="dd-list-link" onClick={() => handleOnClick(item)}>
                   <span className="left">{item.value}</span>
-                  <span className="right">{isItemInSelection(item) && 'Selected'}</span>
+                  {/* <span className="right">{isItemInSelection(item) && 'Selected'}</span> */}
                 </div>
               </li>
             </Link>
