@@ -1,7 +1,22 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-
+import { Dropdown } from '../components';
 import logo from '../images/logo.png';
+
+const items = [
+  {
+    id: 1,
+    value: 'Home',
+  },
+  {
+    id: 2,
+    value: 'Statistics',
+  },
+  {
+    id: 3,
+    value: 'Settings',
+  },
+];
 
 function Header() {
   return (
@@ -13,7 +28,8 @@ function Header() {
               <img className="logo__img" src={logo} alt="logo" />
             </Link>
 
-            <button className="menu__popup"></button>
+            <Dropdown title="Select movie" items={items} />
+            {/* <Dropdown title="Select movie" items={items} multiselect /> */}
           </div>
         </div>
       </div>
