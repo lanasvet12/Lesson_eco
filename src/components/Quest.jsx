@@ -5,21 +5,34 @@ import style from './Quest.module.css';
 import image from '../images/content/quest1.jpg';
 import classNames from 'classnames';
 
-const Quest = ({ img_quest, question_title, answers, onClick }) => {
+const Quest = ({ img_quest, question_title, answers, onClick, description }) => {
+  const [activeBtn, setActiveBtn] = React.useState('');
+  const imageHide = activeBtn === 'active' ? 'disabled' : '';
+
   return (
     <div>
       <div className={style.quest}>
-        <img className={style.image} src={img_quest} alt="quest" />
+        <img className={classNames('quest-images', imageHide)} src={img_quest} alt="quest" />
 
-        <p className={style.text}>{question_title}</p>
+        <p className={classNames('quest-answer', activeBtn)}>{description}</p>
+        <p className={classNames('quest-text', imageHide)}>{question_title}</p>
       </div>
       <div className={style.items}>
         {answers &&
           answers.map((obj, index) => (
-            <ButtonQuestAnsw key={`${obj}_${index}`} answer={obj.answer} />
+            // {classTrue= (obj.correct === true ? 'respect' : '')},
+            <ButtonQuestAnsw
+              key={`${obj}_${index}`}
+              id={index}
+              answer={obj.answer}
+              correct={obj.correct}
+              setActiveBtn={setActiveBtn}
+              classCorrect={obj.correct === true ? 'respect' : ''}
+              disabledClass={activeBtn === 'active' ? 'disabled' : ''}
+            />
           ))}
       </div>
-      <div className={style.link} onClick={onClick}>
+      <div className={classNames('quest__link', activeBtn)} onClick={onClick}>
         Наступне питання
       </div>
     </div>

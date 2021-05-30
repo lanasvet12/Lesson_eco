@@ -41,6 +41,7 @@ const QuizAnswer = ({ quiz, questions, id }) => {
           key={`${el.id}_${index}`}
           img_quest={el.img_quest}
           question_title={el.question_title}
+          description={el.description}
           answers={el.answers}
           onClick={(currentStep) => setCurrentStep((p) => ++p)}
         />
