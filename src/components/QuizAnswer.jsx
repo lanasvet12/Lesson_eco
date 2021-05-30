@@ -44,6 +44,8 @@ const QuizAnswer = ({ quiz, questions, id }) => {
           description={el.description}
           answers={el.answers}
           onClick={(currentStep) => setCurrentStep((p) => ++p)}
+          currentStep={currentStep}
+          numberStep={numberStep}
         />
       </div>
     );

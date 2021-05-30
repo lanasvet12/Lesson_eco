@@ -5,9 +5,38 @@ import style from './Quest.module.css';
 import image from '../images/content/quest1.jpg';
 import classNames from 'classnames';
 
-const Quest = ({ img_quest, question_title, answers, onClick, description }) => {
+const Quest = ({
+  img_quest,
+  question_title,
+  answers,
+  onClick,
+  description,
+  currentStep,
+  numberStep,
+}) => {
   const [activeBtn, setActiveBtn] = React.useState('');
   const imageHide = activeBtn === 'active' ? 'disabled' : '';
+
+  function trueLink() {
+    // debugger;
+    if (currentStep == numberStep - 1) {
+      return (
+        <Link to="/quiz-result">
+          <div className={classNames('quest__link', activeBtn)} onClick={onClick}>
+            Наступне питання
+          </div>
+        </Link>
+      );
+
+      // console.log(currentStep, numberStep);
+    } else {
+      return (
+        <div className={classNames('quest__link', activeBtn)} onClick={onClick}>
+          Наступне питання
+        </div>
+      );
+    }
+  }
 
   return (
     <div>
@@ -32,9 +61,7 @@ const Quest = ({ img_quest, question_title, answers, onClick, description }) => 
             />
           ))}
       </div>
-      <div className={classNames('quest__link', activeBtn)} onClick={onClick}>
-        Наступне питання
-      </div>
+      <div> {trueLink()}</div>
     </div>
   );
 };
