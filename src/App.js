@@ -12,7 +12,11 @@ function App(props) {
         <Switch>
           <Route path="/" exact component={() => <Login />} />
           <Route exact path="/quiz/:id" render={() => <Quiz quiz={props.appState.quiz} />} />
-          <Route exact path="/quiz-result" render={() => <QuizResultPage />} />
+          <Route
+            exact
+            path="/quest-result/:trueQuest:numberStep"
+            render={() => <QuizResultPage />}
+          />
 
           <div className="content">
             <Fragment>

@@ -17,11 +17,12 @@ const Quest = ({
   const [activeBtn, setActiveBtn] = React.useState('');
   const imageHide = activeBtn === 'active' ? 'disabled' : '';
 
+  let trueQuest = 0;
   function trueLink() {
     // debugger;
     if (currentStep == numberStep - 1) {
       return (
-        <Link to="/quiz-result">
+        <Link to={`/quest-result/${trueQuest}${numberStep}`}>
           <div className={classNames('quest__link', activeBtn)} onClick={onClick}>
             Наступне питання
           </div>
