@@ -42,7 +42,7 @@
 
 .btn {
   width: 100%;
-  max-width: 200px;
+  min-width: 250px;
   margin: 12px 0 35px;
   font-size: 18px;
   line-height: 2.5;

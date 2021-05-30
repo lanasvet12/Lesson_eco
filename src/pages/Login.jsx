@@ -59,7 +59,7 @@ const Login = ({ initialState }) => {
     <div className={style.login}>
       <div className="container">
         <form className={style.form}>
-          <h1 className={style.title}>Реєстрація</h1>
+          <h1 className={style.title}>Авторизація</h1>
           {phoneDirty && phoneError && <div style={{ color: 'red' }}>{phoneError}</div>}
           <input
             className={style.phone}
