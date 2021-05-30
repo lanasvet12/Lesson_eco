@@ -1,5 +1,6 @@
 import React from 'react';
-import { QuizBlock} from '../components';
+import { QuizBlock } from '../components';
+
 
 function Home({ quiz }) {
   return (

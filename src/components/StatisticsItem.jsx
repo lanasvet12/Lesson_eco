@@ -1,7 +1,7 @@
 import React from 'react';
 
-import style from './QuizResultItem.module.css';
-function QuizResultItem({ className }) {
+import style from './StatisticsItem.module.css';
+function StatisticsItem({ className }) {
   return (
     <article className={style.item}>
       <div className={style.progress}>
@@ -20,4 +20,4 @@ function QuizResultItem({ className }) {
   );
 }
 
-export default QuizResultItem;
+export default StatisticsItem;

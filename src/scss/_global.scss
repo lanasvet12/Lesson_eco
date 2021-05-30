@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  background-color: white;
+  background-color: #fff;
   color: $default-color;
   overflow-x: hidden;
   @extend %roboto-400;
@@ -49,8 +49,8 @@ button {
 }
 
 .title {
-  position: relative;
   padding-bottom: 10px;
+<<<<<<< HEAD
 <<<<<<< HEAD
   font-size: 14px;
   color: $accent;
@@ -61,10 +61,16 @@ button {
   color: $accent;
   text-align: left;
 >>>>>>> d0beb3df34ae4bf863c8aa0f4e8cad9ca40b1a58
+=======
+  font-size: 36px;
+  color: $accent;
+  text-align: left;
+>>>>>>> ad55191048848997a99b5fb5d7de69aa3c684e13
   @extend %roboto-700;
 }
 
 .logo {
+<<<<<<< HEAD
 <<<<<<< HEAD
   display: none;
   margin-right: 20px;
@@ -75,6 +81,8 @@ button {
   }
 }
 =======
+=======
+>>>>>>> ad55191048848997a99b5fb5d7de69aa3c684e13
   margin-right: 20px;
 
   &__img {
@@ -223,4 +231,95 @@ button {
   -ms-user-select: none;
   user-select: none;
 }
+<<<<<<< HEAD
 >>>>>>> d0beb3df34ae4bf863c8aa0f4e8cad9ca40b1a58
+=======
+
+.item {
+  width: 100%;
+  min-height: 50px;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.item.selected {
+  background-color: #fc887b;
+}
+
+.respect.disabled {
+  background-color: #00c75d;
+  & span {
+    color: #fff;
+  }
+}
+
+.item.correct {
+  background-color: #00c75d;
+}
+
+.item.selected span,
+.item.correct span {
+  color: #fff;
+}
+
+.item.disabled {
+  pointer-events: none;
+}
+
+.desc {
+  padding: 15px;
+  font-size: 18px;
+  color: #019144;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.quest__link {
+  width: 100%;
+  min-height: 50px;
+  min-width: 280px;
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background-color: #86e3ce;
+  color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.quest__link:hover {
+  background-color: #01bf5a;
+}
+
+.quest__link:hover .desc {
+  color: #fff;
+}
+
+.quest__link.active {
+  pointer-events: visible;
+  opacity: 1;
+}
+>>>>>>> ad55191048848997a99b5fb5d7de69aa3c684e13

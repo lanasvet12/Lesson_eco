@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Quest } from '../components';
@@ -7,24 +8,47 @@ const QuizAnswer = ({ quiz, questions, id }) => {
   //индекс выбраного квеста
   let indexQuiz = id;
 
+  const [currentStep, setCurrentStep] = React.useState(0);
+  const [counter, setCounter] = React.useState(0);
+
   //по id получаем елемент квеста ид должны получитьь с компоненты тестов
   let quizTitle = quiz.map((mapItem) => {
     if (mapItem.id === indexQuiz) {
       return mapItem.quiz_title;
     }
   });
+
+  let questionsArr = questions.filter((el, index) => {
+    if (el.id_quiz === indexQuiz) return el;
+  });
+
+  //num step in quest
+  let numberStep = questionsArr.length;
+  function stepCountThisQuest(currentStep) {
+    let newCount = 0;
+    if (currentStep < numberStep) {
+      return (newCount = currentStep + 1);
+    } else {
+      return (newCount = 0);
+    }
+  }
+
   //компонента вопросов
-  let newArr = questions.map((el, index) => {
-    if (el.id_quiz === indexQuiz) {
-      return (
+  let newArr = questionsArr.map((el, index) => {
+    return (
+      <div className={classNames(style.card, index == currentStep ? style.active : '')}>
         <Quest
           key={`${el.id}_${index}`}
           img_quest={el.img_quest}
           question_title={el.question_title}
+          description={el.description}
           answers={el.answers}
+          onClick={(currentStep) => setCurrentStep((p) => ++p)}
+          currentStep={currentStep}
+          numberStep={numberStep}
         />
-      );
-    }
+      </div>
+    );
   });
   return (
     <div className={style.wrapper}>
@@ -56,10 +80,10 @@ const QuizAnswer = ({ quiz, questions, id }) => {
         </Link>
       </div>
       <div className={style.breadcrumbs}>
-        <span className={style.breadcrumbs__first}>1</span>/
-        <span className={style.breadcrumbs__last}>20</span>
+        <span className={style.breadcrumbs__first}>{stepCountThisQuest(currentStep)}</span>/
+        <span className={style.breadcrumbs__last}>{numberStep}</span>
       </div>
-      <div>{newArr}</div>
+      <div className={style.items}>{newArr}</div>
     </div>
   );
 };

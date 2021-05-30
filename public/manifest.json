@@ -7,6 +7,7 @@
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
 <<<<<<< HEAD
+<<<<<<< HEAD
     },
     {
       "src": "logo192.png",
@@ -19,6 +20,8 @@
       "sizes": "512x512"
 =======
 >>>>>>> d0beb3df34ae4bf863c8aa0f4e8cad9ca40b1a58
+=======
+>>>>>>> ad55191048848997a99b5fb5d7de69aa3c684e13
     }
   ],
   "start_url": ".",

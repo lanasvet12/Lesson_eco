@@ -3,18 +3,65 @@ import { Link } from 'react-router-dom';
 import { ButtonQuestAnsw } from '../components';
 import style from './Quest.module.css';
 import image from '../images/content/quest1.jpg';
+import classNames from 'classnames';
 
-const Quest = ({ img_quest, question_title, answers }) => {
+const Quest = ({
+  img_quest,
+  question_title,
+  answers,
+  onClick,
+  description,
+  currentStep,
+  numberStep,
+}) => {
+  const [activeBtn, setActiveBtn] = React.useState('');
+  const imageHide = activeBtn === 'active' ? 'disabled' : '';
+
+  function trueLink() {
+    // debugger;
+    if (currentStep == numberStep - 1) {
+      return (
+        <Link to="/quiz-result">
+          <div className={classNames('quest__link', activeBtn)} onClick={onClick}>
+            Наступне питання
+          </div>
+        </Link>
+      );
+
+      // console.log(currentStep, numberStep);
+    } else {
+      return (
+        <div className={classNames('quest__link', activeBtn)} onClick={onClick}>
+          Наступне питання
+        </div>
+      );
+    }
+  }
+
   return (
-    <div className={style.box}>
+    <div>
       <div className={style.quest}>
-        <img className={style.image} src={img_quest} alt="quest" />
+        <img className={classNames('quest-images', imageHide)} src={img_quest} alt="quest" />
 
-        <p className={style.text}>{question_title}</p>
+        <p className={classNames('quest-answer', activeBtn)}>{description}</p>
+        <p className={classNames('quest-text', imageHide)}>{question_title}</p>
       </div>
       <div className={style.items}>
-        {answers && answers.map((obj) => <ButtonQuestAnsw answer={obj.answer} />)}
+        {answers &&
+          answers.map((obj, index) => (
+            // {classTrue= (obj.correct === true ? 'respect' : '')},
+            <ButtonQuestAnsw
+              key={`${obj}_${index}`}
+              id={index}
+              answer={obj.answer}
+              correct={obj.correct}
+              setActiveBtn={setActiveBtn}
+              classCorrect={obj.correct === true ? 'respect' : ''}
+              disabledClass={activeBtn === 'active' ? 'disabled' : ''}
+            />
+          ))}
       </div>
+      <div> {trueLink()}</div>
     </div>
   );
 };

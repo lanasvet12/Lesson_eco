@@ -1,5 +1,6 @@
 .header {
 <<<<<<< HEAD
+<<<<<<< HEAD
   min-height: 56px;
   padding: 2px 0;
   box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
@@ -9,8 +10,12 @@
     justify-content: space-between;
     align-items: center;
 =======
+=======
+  position: relative;
+>>>>>>> ad55191048848997a99b5fb5d7de69aa3c684e13
   min-height: 66px;
   padding: 2px 0;
+  background-color: #fff;
   box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
   z-index: 10;
 
@@ -18,15 +23,22 @@
     // display: flex;
     // justify-content: space-between;
     // align-items: center;
+<<<<<<< HEAD
 >>>>>>> d0beb3df34ae4bf863c8aa0f4e8cad9ca40b1a58
+=======
+>>>>>>> ad55191048848997a99b5fb5d7de69aa3c684e13
   }
 
   &__box {
     display: flex;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     justify-content: space-between;
 >>>>>>> d0beb3df34ae4bf863c8aa0f4e8cad9ca40b1a58
+=======
+    justify-content: space-between;
+>>>>>>> ad55191048848997a99b5fb5d7de69aa3c684e13
     align-items: center;
     padding: 6px 0;
   }
@@ -52,6 +64,7 @@
       width: 40px;
       height: 40px;
 <<<<<<< HEAD
+<<<<<<< HEAD
       margin-right: -40px;
       border-radius: 3px;
       background-color: #fff;
@@ -59,11 +72,16 @@
       border-radius: 3px;
       background-color: transparent;
 >>>>>>> d0beb3df34ae4bf863c8aa0f4e8cad9ca40b1a58
+=======
+      border-radius: 3px;
+      background-color: transparent;
+>>>>>>> ad55191048848997a99b5fb5d7de69aa3c684e13
       border: none;
 
       &::after {
         position: absolute;
         content: '';
+<<<<<<< HEAD
 <<<<<<< HEAD
         top: 15px;
         left: 0px;
@@ -73,6 +91,8 @@
         border-radius: 1px;
         box-shadow: 0 5px 0 0 $accent, 0 10px 0 0 $accent;
 =======
+=======
+>>>>>>> ad55191048848997a99b5fb5d7de69aa3c684e13
         top: 13px;
         left: 5px;
         width: 30px;
@@ -80,7 +100,10 @@
         background-color: #37383c;
         border-radius: 1px;
         box-shadow: 0 6px 0 0 #37383c, 0 12px 0 0 #37383c;
+<<<<<<< HEAD
 >>>>>>> d0beb3df34ae4bf863c8aa0f4e8cad9ca40b1a58
+=======
+>>>>>>> ad55191048848997a99b5fb5d7de69aa3c684e13
       }
     }
 
@@ -137,6 +160,7 @@
 @media (min-width: 1024px) {
   .header {
 <<<<<<< HEAD
+<<<<<<< HEAD
     &__inner {
       padding-top: 7px;
     }
@@ -145,6 +169,8 @@
     }
 =======
 >>>>>>> d0beb3df34ae4bf863c8aa0f4e8cad9ca40b1a58
+=======
+>>>>>>> ad55191048848997a99b5fb5d7de69aa3c684e13
     .menu {
       &__popup {
         display: none;

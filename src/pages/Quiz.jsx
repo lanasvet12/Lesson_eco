@@ -15,6 +15,7 @@ function Quiz({ quiz }) {
       quests.push(quest);
     });
   });
+
   return (
     <div
       className={style.quiz}
