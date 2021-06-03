@@ -19,10 +19,9 @@ const Quest = ({
 
   let trueQuest = 0;
   function trueLink() {
-    // debugger;
     if (currentStep == numberStep - 1) {
       return (
-        <Link to={`/quest-result/${trueQuest}${numberStep}`}>
+        <Link to={`/quest-result/${trueQuest}/${numberStep}`}>
           <div className={classNames('quest__link', activeBtn)} onClick={onClick}>
             Наступне питання
           </div>
@@ -48,9 +47,9 @@ const Quest = ({
         <p className={classNames('quest-text', imageHide)}>{question_title}</p>
       </div>
       <div className={style.items}>
+        {/* created answers this quest for id quiz */}
         {answers &&
           answers.map((obj, index) => (
-            // {classTrue= (obj.correct === true ? 'respect' : '')},
             <ButtonQuestAnsw
               key={`${obj}_${index}`}
               id={index}
@@ -59,6 +58,8 @@ const Quest = ({
               setActiveBtn={setActiveBtn}
               classCorrect={obj.correct === true ? 'respect' : ''}
               disabledClass={activeBtn === 'active' ? 'disabled' : ''}
+              numberStep={numberStep}
+              currentStep={currentStep}
             />
           ))}
       </div>

@@ -10,6 +10,8 @@ const QuizAnswer = ({ quiz, questions, id }) => {
 
   const [currentStep, setCurrentStep] = React.useState(0);
   const [counter, setCounter] = React.useState(0);
+  console.log(counter, 'counter');
+  console.log(currentStep, 'currentStep');
 
   //по id получаем елемент квеста ид должны получитьь с компоненты тестов
   let quizTitle = quiz.map((mapItem) => {
@@ -24,6 +26,7 @@ const QuizAnswer = ({ quiz, questions, id }) => {
 
   //num step in quest
   let numberStep = questionsArr.length;
+  console.log(numberStep, 'numberStep');
   function stepCountThisQuest(currentStep) {
     let newCount = 0;
     if (currentStep < numberStep) {
@@ -31,6 +34,7 @@ const QuizAnswer = ({ quiz, questions, id }) => {
     } else {
       return (newCount = 0);
     }
+    console.log(newCount, 'newCount');
   }
 
   //компонента вопросов

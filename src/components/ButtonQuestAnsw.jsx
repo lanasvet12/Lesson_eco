@@ -1,11 +1,22 @@
-import React, { setState, Component } from 'react';
+import React, { useState, setState, Component } from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
 import style from './Quest.module.css';
 
-const ButtonQuestAnsw = ({ answer, id, correct, setActiveBtn, classCorrect, disabledClass }) => {
+const ButtonQuestAnsw = ({
+  answer,
+  id,
+  correct,
+  setActiveBtn,
+  classCorrect,
+  disabledClass,
+  numberStep,
+  currentStep,
+}) => {
   const [activeClass, setClass] = React.useState('');
+
+  const [counterState, setCounterState] = useState(0);
 
   //поиск ид елемента труе
   const findTrueAnswer = correct === true ? id : '';
@@ -16,7 +27,6 @@ const ButtonQuestAnsw = ({ answer, id, correct, setActiveBtn, classCorrect, disa
       : (setClass('selected'), setActiveBtn('active'));
   }
 
-  // console.log(answerId);
   return (
     <div
       className={classNames('item', activeClass, classCorrect, disabledClass)}

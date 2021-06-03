@@ -14,7 +14,7 @@ function App(props) {
           <Route exact path="/quiz/:id" render={() => <Quiz quiz={props.appState.quiz} />} />
           <Route
             exact
-            path="/quest-result/:trueQuest:numberStep"
+            path="/quest-result/:trueQuest/:numberStep"
             render={() => <QuizResultPage />}
           />
 

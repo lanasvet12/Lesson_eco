@@ -1,7 +1,7 @@
 import React from 'react';
 import { QuizBlock } from '../components';
 
-
+//quiz = state.quiz
 function Home({ quiz }) {
   return (
     <div className="container">
@@ -10,6 +10,7 @@ function Home({ quiz }) {
         <p className="content__text">Доступні тести</p>
 
         <div className="content__box">
+          {/* created component quizs */}
           <div className="content__items">
             {quiz &&
               quiz.map((obj, index) => (

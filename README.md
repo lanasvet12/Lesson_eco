@@ -1,6 +1,15 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pages this project
+/login - start page
+/home - quiz page
+/quiz - quest page
+/quest-result - page result quest in quiz
+/statistics -page statistics all quiz
+
+start project - npm start
+build project - npm build
 
 ## Available Scripts
 
